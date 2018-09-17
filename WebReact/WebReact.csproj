@@ -36,5 +36,6 @@
     <Content Include="frontend\src\models\userModel.tsx" />
     <Content Include="frontend\src\App.js" />
     <Content Include="frontend\src\index.js" />
+    <Content Include="frontend\public\index.html" />
   </ItemGroup>
 </Project>
