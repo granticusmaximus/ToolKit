@@ -43,5 +43,19 @@
     <Content Include="frontend\src\_constants\user.constants.js" />
     <Content Include="frontend\src\_constants\index.js" />
     <Content Include="frontend\src\_constants\alert.constants.js" />
+    <Content Include="frontend\src\_helpers\auth-header.js" />
+    <Content Include="frontend\src\_helpers\history.js" />
+    <Content Include="frontend\src\_helpers\index.js" />
+    <Content Include="frontend\src\_helpers\store.js" />
+    <Content Include="frontend\src\_reducers\alert.reducer.js" />
+    <Content Include="frontend\src\_reducers\users.reducer.js" />
+    <Content Include="frontend\src\_reducers\authentication.reducer.js" />
+    <Content Include="frontend\src\_reducers\index.js" />
+    <Content Include="frontend\src\_reducers\registration.reducer.js" />
+    <Content Include="frontend\src\_services\index.js" />
+    <Content Include="frontend\src\_services\user.service.js" />
+    <Content Include="frontend\src\_helpers\fake-backend.js" />
+    <Content Include="frontend\src\layouts\Login\index.js" />
+    <Content Include="frontend\src\layouts\Registration\index.js" />
   </ItemGroup>
 </Project>

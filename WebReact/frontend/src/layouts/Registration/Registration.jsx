@@ -1,105 +1,104 @@
 import "../../assets/css/App.css";
-import React, { Component } from "react";
-import { FormGroup, FormControl } from "react-bootstrap";
-import { Button, Label } from "reactstrap";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 
-class Registration extends Component {
-  constructor(props) {
-    super(props);
+import { userActions } from '../../_actions';
 
-    this.state = {
-      firstName: "",
-      lastName: "",
-      email: "",
-      password: "",
-      passwordConfirm: ""
-    };
-  }
+class RegisterPage extends React.Component {
+    constructor(props) {
+        super(props);
 
-  validateForm() {
-    return (
-      this.state.email.length > 0 &&
-      this.state.password.length > 0 &&
-      this.state.firstName.length > 0 &&
-      this.state.lastName.length > 0 &&
-      this.state.passwordConfirm.length > 0
-    );
-  }
+        this.state = {
+            user: {
+                firstName: '',
+                lastName: '',
+                username: '',
+                password: ''
+            },
+            submitted: false
+        };
 
-  handleChange = event => {
-    this.setState({
-      [event.target.id]: event.target.value
-    });
-  };
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
 
-  handleSubmit = event => {
-    event.preventDefault();
-  };
-  render() {
-    return (
-      <div className="container">
-        <div className="loginBox">
-          <center>
-            <div className="loginHeader">Log Into Your CRM</div>
-          </center>
-          <div className="Login">
-            <form onSubmit={this.handleSubmit}>
-              <FormGroup controlId="firstName" bsSize="large">
-                <Label>First Name</Label>
-                <FormControl
-                  autoFocus
-                  type="firstName"
-                  value={this.state.firstName}
-                  onChange={this.handleChange}
-                />
-              </FormGroup>
-              <FormGroup controlId="lastName" bsSize="large">
-                <Label>Last Name</Label>
-                <FormControl
-                  type="lastName"
-                  value={this.state.lastName}
-                  onChange={this.handleChange}
-                />
-              </FormGroup>
-              <FormGroup controlId="email" bsSize="large">
-                <Label>Email</Label>
-                <FormControl
-                  type="email"
-                  value={this.state.email}
-                  onChange={this.handleChange}
-                />
-              </FormGroup>
-              <FormGroup controlId="password" bsSize="large">
-                <Label>Password</Label>
-                <FormControl
-                  value={this.state.password}
-                  onChange={this.handleChange}
-                  type="password"
-                />
-              </FormGroup>
-              <FormGroup controlId="passwordConfirm" bsSize="large">
-                <Label>Confirm Password</Label>
-                <FormControl
-                  value={this.state.passwordConfirm}
-                  onChange={this.handleChange}
-                  type="password"
-                />
-              </FormGroup>
-              <Button
-                color="warning"
-                block
-                bsSize="large"
-                disabled={!this.validateForm()}
-                type="submit"
-              >
-                Register
-              </Button>
-            </form>
-          </div>
-        </div>
-      </div>
-    );
-  }
+    handleChange(event) {
+        const { name, value } = event.target;
+        const { user } = this.state;
+        this.setState({
+            user: {
+                ...user,
+                [name]: value
+            }
+        });
+    }
+
+    handleSubmit(event) {
+        event.preventDefault();
+
+        this.setState({ submitted: true });
+        const { user } = this.state;
+        const { dispatch } = this.props;
+        if (user.firstName && user.lastName && user.username && user.password) {
+            dispatch(userActions.register(user));
+        }
+    }
+
+    render() {
+        const { registering  } = this.props;
+        const { user, submitted } = this.state;
+        return (
+            <div className="col-md-6 col-md-offset-3">
+                <h2>Register</h2>
+                <form name="form" onSubmit={this.handleSubmit}>
+                    <div className={'form-group' + (submitted && !user.firstName ? ' has-error' : '')}>
+                        <label htmlFor="firstName">First Name</label>
+                        <input type="text" className="form-control" name="firstName" value={user.firstName} onChange={this.handleChange} />
+                        {submitted && !user.firstName &&
+                            <div className="help-block">First Name is required</div>
+                        }
+                    </div>
+                    <div className={'form-group' + (submitted && !user.lastName ? ' has-error' : '')}>
+                        <label htmlFor="lastName">Last Name</label>
+                        <input type="text" className="form-control" name="lastName" value={user.lastName} onChange={this.handleChange} />
+                        {submitted && !user.lastName &&
+                            <div className="help-block">Last Name is required</div>
+                        }
+                    </div>
+                    <div className={'form-group' + (submitted && !user.username ? ' has-error' : '')}>
+                        <label htmlFor="username">Username</label>
+                        <input type="text" className="form-control" name="username" value={user.username} onChange={this.handleChange} />
+                        {submitted && !user.username &&
+                            <div className="help-block">Username is required</div>
+                        }
+                    </div>
+                    <div className={'form-group' + (submitted && !user.password ? ' has-error' : '')}>
+                        <label htmlFor="password">Password</label>
+                        <input type="password" className="form-control" name="password" value={user.password} onChange={this.handleChange} />
+                        {submitted && !user.password &&
+                            <div className="help-block">Password is required</div>
+                        }
+                    </div>
+                    <div className="form-group">
+                        <button className="btn btn-primary">Register</button>
+                        {registering && 
+                            <img src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+                        }
+                        <Link to="/login" className="btn btn-link">Cancel</Link>
+                    </div>
+                </form>
+            </div>
+        );
+    }
 }
 
-export default Registration;
+function mapStateToProps(state) {
+    const { registering } = state.registration;
+    return {
+        registering
+    };
+}
+
+const connectedRegisterPage = connect(mapStateToProps)(RegisterPage);
+export { connectedRegisterPage as RegisterPage };
