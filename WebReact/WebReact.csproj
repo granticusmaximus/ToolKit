@@ -11,5 +11,18 @@
   <ItemGroup>
     <ProjectReference Include="..\WebAPI\WebAPI.csproj" />
     <Content Include="frontend\package.json" />
+    <Content Include="frontend\src\assets\css\App.css" />
+    <Content Include="frontend\src\components\NavBar\NavBar.jsx" />
+    <Content Include="frontend\src\components\ToDoItems\ToDoItems.jsx" />
+    <Content Include="frontend\src\components\UserSideBar\SideBar.jsx" />
+    <Content Include="frontend\src\components\actionHelper.jsx" />
+    <Content Include="frontend\src\layouts\Clients\AddClient.jsx" />
+    <Content Include="frontend\src\layouts\Clients\Clients.jsx" />
+    <Content Include="frontend\src\components\actionHelper.tsx" />
+    <Content Include="frontend\src\layouts\Dashboard\Users\Dashboard.jsx" />
+    <Content Include="frontend\src\layouts\Dashboard\Users\UserEditProfile.jsx" />
+    <Content Include="frontend\src\layouts\Dashboard\Users\UserFriends.jsx" />
+    <Content Include="frontend\src\layouts\Dashboard\Users\UserMessage.jsx" />
+    <Content Include="frontend\src\layouts\Dashboard\Users\UserProfie.jsx" />
   </ItemGroup>
 </Project>
