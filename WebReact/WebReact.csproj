@@ -37,5 +37,11 @@
     <Content Include="frontend\src\App.js" />
     <Content Include="frontend\src\index.js" />
     <Content Include="frontend\public\index.html" />
+    <Content Include="frontend\src\_actions\index.js" />
+    <Content Include="frontend\src\_actions\alert.actions.js" />
+    <Content Include="frontend\src\_actions\user.actions.js" />
+    <Content Include="frontend\src\_constants\user.constants.js" />
+    <Content Include="frontend\src\_constants\index.js" />
+    <Content Include="frontend\src\_constants\alert.constants.js" />
   </ItemGroup>
 </Project>
