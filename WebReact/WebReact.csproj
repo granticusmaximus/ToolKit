@@ -10,5 +10,6 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WebAPI\WebAPI.csproj" />
+    <Content Include="frontend\package.json" />
   </ItemGroup>
 </Project>
