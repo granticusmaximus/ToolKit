@@ -15,6 +15,7 @@ import AboutPage from "../../layouts/Frontend/About/AboutPage";
 import ContactPage from "../../layouts/Frontend/Contact/Contact";
 import { ToDoPage } from "../../layouts/Frontend/ToDoPage/ToDoPage";
 import ClientPage from "../../layouts/Clients/Clients";
+import AddClient from "../../layouts/Clients/AddClient";
 
 export default class NaviRoute extends React.Component {
   constructor(props) {
@@ -60,11 +61,27 @@ export default class NaviRoute extends React.Component {
                   ToDo List
                 </Link>
               </li>
-              <li>
-                <Link to={"/clients"} className="nav-link">
-                  Client List
-                </Link>
-              </li>
+              <UncontrolledDropdown>
+                <DropdownToggle nav caret>
+                  Client Info
+                </DropdownToggle>
+                <DropdownMenu right>
+                  <DropdownItem>
+                    <li>
+                      <Link to={"/addclient"} className="nav-link">
+                        Add Client
+                      </Link>
+                    </li>
+                  </DropdownItem>
+                  <DropdownItem>
+                    <li>
+                      <Link to={"/clients"} className="nav-link">
+                        Clients
+                      </Link>
+                    </li>
+                  </DropdownItem>
+                </DropdownMenu>
+              </UncontrolledDropdown>
               <UncontrolledDropdown>
                 <DropdownToggle nav caret>
                   Account Info
@@ -132,6 +149,7 @@ export default class NaviRoute extends React.Component {
             <Route path="/dashboard" component={DashBoard} />
             <Route path="/todo" component={ToDoPage} />
             <Route path="/clients" component={ClientPage} />
+            <Route path="/addclient" component={AddClient} />
           </Switch>
         </div>
       </Router>

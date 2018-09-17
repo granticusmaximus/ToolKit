@@ -294,6 +294,22 @@ html * {
     box-shadow: 0 1px 10px #b5b4b4;
   }
   
+  .clientBox {
+    background: -webkit-linear-gradient(
+      top,
+      rgba(240, 240, 240, 1) 0%,
+      rgba(176, 176, 176, 1) 100%
+    );
+    color: black;
+    border: 1px solid #b5b4b4;
+    width: 100%;
+    height: auto;
+    padding: 50px;
+    margin: auto;
+    border-radius: 3px;
+    box-shadow: 0 1px 10px #b5b4b4;
+  }
+
   blockquote footer:before,
   blockquote small:before {
     content: "\2014 \00A0";
