@@ -9,6 +9,8 @@
     <Folder Include="Services\" />
     <Folder Include="Auth\" />
     <Folder Include="Models\DTO\" />
+    <Folder Include="Entities\" />
+    <Folder Include="Exceptions\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
