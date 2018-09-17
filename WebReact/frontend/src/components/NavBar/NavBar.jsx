@@ -7,7 +7,7 @@ import {
   DropdownItem,
   ButtonDropdown
 } from "reactstrap";
-import LoginPage from "../../layouts/Login/LoginPage";
+import LoginPage from "../../layouts/Login/Login";
 import RegistrationPage from "../../layouts/Registration/Registration";
 import HomePage from "../../layouts/Frontend/Home/Home";
 import DashBoard from "../../layouts/Dashboard/Users/Dashboard";

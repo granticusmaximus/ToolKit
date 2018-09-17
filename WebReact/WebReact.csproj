@@ -24,5 +24,17 @@
     <Content Include="frontend\src\layouts\Dashboard\Users\UserFriends.jsx" />
     <Content Include="frontend\src\layouts\Dashboard\Users\UserMessage.jsx" />
     <Content Include="frontend\src\layouts\Dashboard\Users\UserProfie.jsx" />
+    <Content Include="frontend\src\layouts\Frontend\About\AboutPage.jsx" />
+    <Content Include="frontend\src\layouts\Frontend\Contact\Contact.jsx" />
+    <Content Include="frontend\src\layouts\Frontend\Home\Home.jsx" />
+    <Content Include="frontend\src\layouts\Frontend\ToDoPage\ToDoPage.jsx" />
+    <Content Include="frontend\src\layouts\Login\Login.jsx" />
+    <Content Include="frontend\src\layouts\Registration\Registration.jsx" />
+    <Content Include="frontend\src\models\clientModel.tsx" />
+    <Content Include="frontend\src\models\invoiceModel.tsx" />
+    <Content Include="frontend\src\tests\App.test.js" />
+    <Content Include="frontend\src\models\userModel.tsx" />
+    <Content Include="frontend\src\App.js" />
+    <Content Include="frontend\src\index.js" />
   </ItemGroup>
 </Project>
