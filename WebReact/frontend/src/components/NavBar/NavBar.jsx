@@ -16,7 +16,7 @@ import ContactPage from "../../layouts/Frontend/Contact/Contact";
 import { ToDoPage } from "../../layouts/Frontend/ToDoPage/ToDoPage";
 import ClientPage from "../../layouts/Clients/Clients";
 import AddClient from "../../layouts/Clients/AddClient";
-import Notes from "../../layouts/Notes/Note/Note";
+import Board from "../../layouts/Projects/Board";
 
 export default class NaviRoute extends React.Component {
   constructor(props) {
@@ -156,7 +156,7 @@ export default class NaviRoute extends React.Component {
             <Route path="/todo" component={ToDoPage} />
             <Route path="/clients" component={ClientPage} />
             <Route path="/addclient" component={AddClient} />
-            <Route path="/projects" component={Notes} />
+            <Route path="/projects" component={Board} />
           </Switch>
         </div>
       </Router>
