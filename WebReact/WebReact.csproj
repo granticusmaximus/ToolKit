@@ -57,5 +57,11 @@
     <Content Include="frontend\src\_helpers\fake-backend.js" />
     <Content Include="frontend\src\layouts\Login\index.js" />
     <Content Include="frontend\src\layouts\Registration\index.js" />
+    <Content Include="frontend\src\layouts\Notes\Sidebar\Sidebar.css" />
+    <Content Include="frontend\src\layouts\Notes\Sidebar\Sidebar.js" />
+    <Content Include="frontend\src\layouts\Notes\Editor\Editor.css" />
+    <Content Include="frontend\src\layouts\Notes\Editor\Editor.js" />
+    <Content Include="frontend\src\layouts\Notes\Note\Note.jsx" />
+    <Content Include="frontend\src\layouts\Notes\Note\Notes.css" />
   </ItemGroup>
 </Project>
