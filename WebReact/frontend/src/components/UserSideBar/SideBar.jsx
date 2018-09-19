@@ -6,7 +6,6 @@ import Messages from "../../layouts/Dashboard/Users/UserMessage";
 import Friends from "../../layouts/Dashboard/Users/UserFriends";
 import EditProfile from "../../layouts/Dashboard/Users/UserEditProfile";
 
-
 const SideBar = () => (
   <Router>
     <div style={{ display: "flex" }}>
@@ -15,7 +14,7 @@ const SideBar = () => (
           <div className="header">Menu</div>
           <li>
             <Link to={"/user/profile"} className="nav-link">
-              User Profile
+              Profile
             </Link>
           </li>
           <li>

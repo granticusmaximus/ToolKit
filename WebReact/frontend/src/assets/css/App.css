@@ -162,7 +162,7 @@ html * {
   }
   
   .sideBar {
-    width: 30%;
+    width: auto;
     padding: 30px;
     background: -webkit-linear-gradient(
       top,
