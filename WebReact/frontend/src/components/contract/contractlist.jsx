@@ -1,16 +1,16 @@
 import React, { PropTypes } from 'react';
-import { Link, browserHistory } from 'react-router';
+import { Link } from 'react-router-dom';
 import { AgGridReact, AgGridColumn } from "ag-grid-react";
 import 'ag-grid/dist/styles/ag-grid.css';
 import 'ag-grid/dist/styles/ag-theme-material.css';
 import action from './aggridactions.jsx';
 /*import KPIContractValue from '../KPI/kpicontractvalue.jsx';
 import KPI2 from '../KPI/kpi2.jsx';*/
-import * as TemplateAction from '../../actions/templateAction.jsx';
+import * as TemplateAction from '../../_actions/templateAction';
 import TemplateStore from '../../store/templateStore.jsx';
-import * as ClientAction from '../../actions/clientAction.jsx';
+import * as ClientAction from '../../_actions/clientAction';
 import ClientStore from '../../store/clientStore.jsx';
-import * as ContractAction from '../../actions/contractAction.jsx';
+import * as ContractAction from '../../_actions/contractAction';
 import ContractStore from '../../store/contractStore.jsx';
 import * as UserAction from '../../actions/userAction.jsx';
 import UserStore from '../../store/userStore.jsx';
@@ -99,7 +99,6 @@ class ContractList extends React.Component {
      }
 
     componentDidMount() {
-       ContractAction._getContractList();
        ContractAction._getListApprovals();
        UserAction._getUserRolesList();
       
@@ -115,14 +114,6 @@ class ContractList extends React.Component {
             this.setState({templatelist});
           }
         }
-
-    _clientStoreChange(type){
-        if(type == 'ClientList'){
-        let clientdetails = ClientStore._getClientDeatilsList() || {};
-        this.setState({clientdetails});
-      }
-
-    }
 
     _contractStoreChange(type){
         if(type == 'ContractList'){

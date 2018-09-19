@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import { Link, browserHistory } from 'react-router';
+import { Link } from 'react-router-dom';
 import * as TemplateAction from '../../actions/templateAction.jsx';
 import TemplateStore from '../../store/templateStore.jsx';
 import * as ClientAction from '../../actions/clientAction.jsx';

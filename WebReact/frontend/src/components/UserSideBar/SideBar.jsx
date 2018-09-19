@@ -6,6 +6,7 @@ import Messages from "../../layouts/Dashboard/Users/UserMessage";
 import Friends from "../../layouts/Dashboard/Users/UserFriends";
 import EditProfile from "../../layouts/Dashboard/Users/UserEditProfile";
 import ReportsPage from "../../layouts/Reports/Reports";
+import ContractPage from "../../layouts/Contracts/ContractList";
 
 const SideBar = () => (
   <Router>
@@ -33,6 +34,11 @@ const SideBar = () => (
               Reports
             </Link>
           </li>
+          <li>
+            <Link to={"/contracts"} className="nav-link">
+              Contract List
+            </Link>
+          </li>
         </ul>
       </div>
       <Switch>
@@ -41,6 +47,7 @@ const SideBar = () => (
         <Route exact path="/user/messages" component={Messages} />
         <Route exact path="/user/friends" component={Friends} />
         <Route exact path="/reports" component={ReportsPage} />
+        <Route exact path="/contracts" component={ContractPage} />
       </Switch>
     </div>
   </Router>

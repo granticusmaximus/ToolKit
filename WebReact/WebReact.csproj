@@ -76,5 +76,10 @@
     <Content Include="frontend\src\components\contract\point.js" />
     <Content Include="frontend\src\components\contract\previewContract.jsx" />
     <Content Include="frontend\src\components\contract\tabcontract.jsx" />
+    <Content Include="frontend\src\layouts\Clients\ContractList.jsx" />
+    <Content Include="frontend\src\layouts\Contracts\ContractList.jsx" />
+    <Content Include="frontend\src\_actions\clientActions.jsx" />
+    <Content Include="frontend\src\_actions\templateAction.jsx" />
+    <Content Include="frontend\src\_actions\userAction.jsx" />
   </ItemGroup>
 </Project>
