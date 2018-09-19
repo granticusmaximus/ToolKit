@@ -1,6 +1,6 @@
 import Api from '../api.jsx';
 import { browserHistory } from 'react-router';
-import dispatcher from "../dispatchers/dispatcher";
+import dispatcher from "../../src/dispatcher/dispatcher";
 
 
 export function _createUserDetails(data){

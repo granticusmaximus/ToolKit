@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 import { Document } from 'react-pdf/build/entry.webpack';
 import * as ContractAction from '../../actions/contractAction.jsx';
 import ContractStore from '../../store/contractStore.jsx';
-import * as UserAction from '../../actions/userAction.jsx';
+import * as UserAction from '../../_actions/userAction';
 import UserStore from '../../store/userStore.jsx';
 import html2canvas from 'html2canvas';
 import html2pdf from 'html2pdf.js';

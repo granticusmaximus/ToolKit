@@ -81,5 +81,8 @@
     <Content Include="frontend\src\_actions\clientActions.jsx" />
     <Content Include="frontend\src\_actions\templateAction.jsx" />
     <Content Include="frontend\src\_actions\userAction.jsx" />
+    <Content Include="frontend\src\store\templateStore.jsx" />
+    <Content Include="frontend\src\store\clientStore.jsx" />
+    <Content Include="frontend\src\store\userStore.jsx" />
   </ItemGroup>
 </Project>

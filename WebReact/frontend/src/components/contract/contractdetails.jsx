@@ -19,7 +19,7 @@ import * as ClientAction from '../../actions/clientAction.jsx';
 import ClientStore from '../../store/clientStore.jsx';
 import * as ContractAction from '../../actions/contractAction.jsx';
 import ContractStore from '../../store/contractStore.jsx';
-import * as UserAction from '../../actions/userAction.jsx';
+import * as UserAction from '../../_actions/userAction';
 import UserStore from '../../store/userStore.jsx';
 import * as _ from 'lodash';
 import FontAwesome from 'react-fontawesome';

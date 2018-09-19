@@ -1,12 +1,10 @@
 import React, {Component} from "react";
 import { Link } from 'react-router-dom';
-import * as TemplateAction from '../../actions/templateAction.jsx';
 import TemplateStore from '../../store/templateStore.jsx';
-import * as ClientAction from '../../actions/clientAction.jsx';
 import ClientStore from '../../store/clientStore.jsx';
-import * as ContractAction from '../../actions/contractAction.jsx';
+import * as ContractAction from '../../_actions/contractAction';
 import ContractStore from '../../store/contractStore.jsx';
-import * as UserAction from '../../actions/userAction.jsx';
+import * as UserAction from '../../_actions/userAction';
 import UserStore from '../../store/userStore.jsx';
 
 export default class ClickableRenderer extends Component {
@@ -53,7 +51,6 @@ export default class ClickableRenderer extends Component {
      }
 
     componentDidMount() {
-       ContractAction._getContractList();
        UserAction._getUserRolesList();
     }
 

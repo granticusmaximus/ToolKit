@@ -8,11 +8,10 @@ import action from './aggridactions.jsx';
 import KPI2 from '../KPI/kpi2.jsx';*/
 import * as TemplateAction from '../../_actions/templateAction';
 import TemplateStore from '../../store/templateStore.jsx';
-import * as ClientAction from '../../_actions/clientAction';
 import ClientStore from '../../store/clientStore.jsx';
 import * as ContractAction from '../../_actions/contractAction';
 import ContractStore from '../../store/contractStore.jsx';
-import * as UserAction from '../../actions/userAction.jsx';
+import * as UserAction from '../../_actions/userAction';
 import UserStore from '../../store/userStore.jsx';
 
 class ContractList extends React.Component {

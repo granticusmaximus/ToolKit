@@ -1,5 +1,5 @@
 import Api from '../api.jsx';
-import dispatcher from "../dispatchers/dispatcher";
+import dispatcher from "../../src/dispatcher/dispatcher";
 
 
 
