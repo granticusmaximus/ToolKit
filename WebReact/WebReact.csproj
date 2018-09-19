@@ -67,5 +67,14 @@
     <Content Include="frontend\src\store\contractStore.jsx" />
     <Content Include="frontend\src\components\Report\Report.jsx" />
     <Content Include="frontend\src\layouts\Reports\Reports.jsx" />
+    <Content Include="frontend\src\components\contract\aggridactions.jsx" />
+    <Content Include="frontend\src\components\contract\bezier.js" />
+    <Content Include="frontend\src\components\contract\contractdetails.jsx" />
+    <Content Include="frontend\src\components\contract\contractlist.jsx" />
+    <Content Include="frontend\src\components\contract\imageupload.css" />
+    <Content Include="frontend\src\components\contract\index.js" />
+    <Content Include="frontend\src\components\contract\point.js" />
+    <Content Include="frontend\src\components\contract\previewContract.jsx" />
+    <Content Include="frontend\src\components\contract\tabcontract.jsx" />
   </ItemGroup>
 </Project>

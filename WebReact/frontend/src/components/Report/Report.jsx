@@ -130,7 +130,7 @@ render() {
                 <aside className="content_block">
             <div className="title_block">
                 <div className="row">
-                        <div className="col-md-6"> <h4> Reports </h4>   </div>
+                        <div className="header"> <h4> Reports </h4>   </div>
                         
                 </div>
             </div>
