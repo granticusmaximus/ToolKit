@@ -59,5 +59,13 @@
     <Content Include="frontend\src\layouts\Registration\index.js" />
     <Content Include="frontend\src\layouts\Projects\Board.jsx" />
     <Content Include="frontend\src\layouts\Projects\Notes.jsx" />
+    <Content Include="frontend\src\dispatcher\dispatcher.js" />
+    <Content Include="frontend\src\urlConfig.jsx" />
+    <Content Include="frontend\src\api.jsx" />
+    <Content Include="frontend\src\pdfapi.jsx" />
+    <Content Include="frontend\src\_actions\contractAction.jsx" />
+    <Content Include="frontend\src\store\contractStore.jsx" />
+    <Content Include="frontend\src\components\Report\Report.jsx" />
+    <Content Include="frontend\src\layouts\Reports\Reports.jsx" />
   </ItemGroup>
 </Project>
