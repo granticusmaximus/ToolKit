@@ -33,7 +33,6 @@ class Report extends React.Component {
     }
 
     componentDidMount() {
-      ContractAction._getContractList(); 
       ContractAction._getReports();
     }
 

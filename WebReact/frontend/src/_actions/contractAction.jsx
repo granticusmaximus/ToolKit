@@ -1,5 +1,5 @@
 import Api from '../api';
-import dispatcher from "../dispatchers/dispatcher";
+import dispatcher from "../dispatcher/dispatcher";
 
 export function _createContractDetails(data){
 	dispatcher.dispatch({

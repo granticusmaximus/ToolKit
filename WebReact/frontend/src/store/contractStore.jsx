@@ -1,5 +1,5 @@
 import {EventEmitter} from "events";
-import dispatcher from "../dispatchers/dispatcher";
+import dispatcher from "../dispatcher/dispatcher";
 
 class ContractStore extends EventEmitter{
 	
