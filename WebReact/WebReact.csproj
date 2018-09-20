@@ -16,8 +16,6 @@
     <Content Include="frontend\src\components\ToDoItems\ToDoItems.jsx" />
     <Content Include="frontend\src\components\UserSideBar\SideBar.jsx" />
     <Content Include="frontend\src\components\actionHelper.jsx" />
-    <Content Include="frontend\src\layouts\Clients\AddClient.jsx" />
-    <Content Include="frontend\src\layouts\Clients\Clients.jsx" />
     <Content Include="frontend\src\components\actionHelper.tsx" />
     <Content Include="frontend\src\layouts\Dashboard\Users\Dashboard.jsx" />
     <Content Include="frontend\src\layouts\Dashboard\Users\UserEditProfile.jsx" />
@@ -63,26 +61,13 @@
     <Content Include="frontend\src\urlConfig.jsx" />
     <Content Include="frontend\src\api.jsx" />
     <Content Include="frontend\src\pdfapi.jsx" />
-    <Content Include="frontend\src\_actions\contractAction.jsx" />
     <Content Include="frontend\src\store\contractStore.jsx" />
-    <Content Include="frontend\src\components\Report\Report.jsx" />
-    <Content Include="frontend\src\layouts\Reports\Reports.jsx" />
-    <Content Include="frontend\src\components\contract\aggridactions.jsx" />
-    <Content Include="frontend\src\components\contract\bezier.js" />
-    <Content Include="frontend\src\components\contract\contractdetails.jsx" />
-    <Content Include="frontend\src\components\contract\contractlist.jsx" />
-    <Content Include="frontend\src\components\contract\imageupload.css" />
-    <Content Include="frontend\src\components\contract\index.js" />
-    <Content Include="frontend\src\components\contract\point.js" />
-    <Content Include="frontend\src\components\contract\previewContract.jsx" />
-    <Content Include="frontend\src\components\contract\tabcontract.jsx" />
-    <Content Include="frontend\src\layouts\Clients\ContractList.jsx" />
     <Content Include="frontend\src\layouts\Contracts\ContractList.jsx" />
-    <Content Include="frontend\src\_actions\clientActions.jsx" />
-    <Content Include="frontend\src\_actions\templateAction.jsx" />
-    <Content Include="frontend\src\_actions\userAction.jsx" />
     <Content Include="frontend\src\store\templateStore.jsx" />
     <Content Include="frontend\src\store\clientStore.jsx" />
     <Content Include="frontend\src\store\userStore.jsx" />
+    <Content Include="frontend\src\_components\index.js" />
+    <Content Include="frontend\src\_components\PrivateRoute.jsx" />
+    <Content Include="frontend\src\_helpers\config.js" />
   </ItemGroup>
 </Project>
