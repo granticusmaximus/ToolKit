@@ -7,15 +7,13 @@ import {
   DropdownItem,
   ButtonDropdown
 } from "reactstrap";
-import * as LoginPage from "../../layouts/Login/index";
-import * as RegistrationPage from "../../layouts/Registration/index";
 import HomePage from "../../layouts/Frontend/Home/Home";
 import DashBoard from "../../layouts/Dashboard/Users/Dashboard";
 import AboutPage from "../../layouts/Frontend/About/AboutPage";
 import ContactPage from "../../layouts/Frontend/Contact/Contact";
-import { ToDoPage } from "../../layouts/Frontend/ToDoPage/ToDoPage";
+import { TodoApp } from "../../layouts/Frontend/ToDoPage/ToDoPage";
 import Board from "../../layouts/Projects/Board";
-import { RegisterPage } from "../../layouts/Registration/Registration";
+import RegisterPage from "../../layouts/Frontend/Register/RegisterPage";
 
 export default class NaviRoute extends React.Component {
   constructor(props) {
@@ -73,13 +71,6 @@ export default class NaviRoute extends React.Component {
                 <DropdownMenu right>
                   <DropdownItem>
                     <li>
-                      <Link to={"/login"} className="nav-link">
-                        Login
-                      </Link>
-                    </li>
-                  </DropdownItem>
-                  <DropdownItem>
-                    <li>
                       <Link to={"/register"} className="nav-link">
                         Register
                       </Link>
@@ -126,12 +117,11 @@ export default class NaviRoute extends React.Component {
           </nav>
           <Switch>
             <Route exact path="/" component={HomePage} />
-            <Route exact path="/login" component={LoginPage} />
-            <Route path="/register" component={RegisterPage} />
+            <Route exact path="/register" component={RegisterPage} />
             <Route path="/about" component={AboutPage} />
             <Route path="/contact" component={ContactPage} />
             <Route path="/dashboard" component={DashBoard} />
-            <Route path="/todo" component={ToDoPage} />
+            <Route path="/todo" component={TodoApp} />
             <Route path="/projects" component={Board} />
           </Switch>
         </div>

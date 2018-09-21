@@ -72,5 +72,9 @@
     <Content Include="frontend\src\layouts\Frontend\Register\RegisterPage.jsx" />
     <Content Include="frontend\src\components\LoginComponent\LoginComponent.jsx" />
     <Content Include="frontend\src\components\RegisterComponent\RegisterComponent.jsx" />
+    <Content Include="frontend\src\components\LoginComponent\loginapi.sql" />
+    <Content Include="frontend\src\components\RegisterComponent\registerUser.sql" />
+    <Content Include="frontend\src\components\ui\TodoList.js" />
+    <Content Include="frontend\src\components\ui\TodoItem.js" />
   </ItemGroup>
 </Project>
