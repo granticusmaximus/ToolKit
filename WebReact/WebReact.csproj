@@ -26,7 +26,6 @@
     <Content Include="frontend\src\layouts\Frontend\Contact\Contact.jsx" />
     <Content Include="frontend\src\layouts\Frontend\Home\Home.jsx" />
     <Content Include="frontend\src\layouts\Frontend\ToDoPage\ToDoPage.jsx" />
-    <Content Include="frontend\src\layouts\Login\Login.jsx" />
     <Content Include="frontend\src\layouts\Registration\Registration.jsx" />
     <Content Include="frontend\src\models\clientModel.tsx" />
     <Content Include="frontend\src\models\invoiceModel.tsx" />
@@ -53,7 +52,6 @@
     <Content Include="frontend\src\_services\index.js" />
     <Content Include="frontend\src\_services\user.service.js" />
     <Content Include="frontend\src\_helpers\fake-backend.js" />
-    <Content Include="frontend\src\layouts\Login\index.js" />
     <Content Include="frontend\src\layouts\Registration\index.js" />
     <Content Include="frontend\src\layouts\Projects\Board.jsx" />
     <Content Include="frontend\src\layouts\Projects\Notes.jsx" />
@@ -69,5 +67,10 @@
     <Content Include="frontend\src\_components\index.js" />
     <Content Include="frontend\src\_components\PrivateRoute.jsx" />
     <Content Include="frontend\src\_helpers\config.js" />
+    <Content Include="frontend\.gitignore" />
+    <Content Include="frontend\src\layouts\Frontend\Login\LoginPage.jsx" />
+    <Content Include="frontend\src\layouts\Frontend\Register\RegisterPage.jsx" />
+    <Content Include="frontend\src\components\LoginComponent\LoginComponent.jsx" />
+    <Content Include="frontend\src\components\RegisterComponent\RegisterComponent.jsx" />
   </ItemGroup>
 </Project>
