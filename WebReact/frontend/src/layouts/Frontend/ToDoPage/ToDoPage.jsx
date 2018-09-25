@@ -42,7 +42,7 @@ const Todo = ({ todo, remove }) => {
   // Each Todo
   return (
     <a
-      href="#"
+      href=""
       className="list-group-item"
       onClick={() => {
         remove(todo.id);

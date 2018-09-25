@@ -9,9 +9,7 @@ import {
 } from "reactstrap";
 import HomePage from "../../layouts/Frontend/Home/Home";
 import DashBoard from "../../layouts/Dashboard/Users/Dashboard";
-import AboutPage from "../../layouts/Frontend/About/AboutPage";
 import ContactPage from "../../layouts/Frontend/Contact/Contact";
-import { TodoApp } from "../../layouts/Frontend/ToDoPage/ToDoPage";
 import Board from "../../layouts/Projects/Board";
 import RegisterPage from "../../layouts/Frontend/Register/RegisterPage";
 
@@ -45,18 +43,8 @@ export default class NaviRoute extends React.Component {
                 </Link>
               </li>
               <li>
-                <Link to={"/about"} className="nav-link">
-                  About
-                </Link>
-              </li>
-              <li>
                 <Link to={"/contact"} className="nav-link">
                   Contact
-                </Link>
-              </li>
-              <li>
-                <Link to={"/todo"} className="nav-link">
-                  ToDo List
                 </Link>
               </li>
               <li>
@@ -118,10 +106,8 @@ export default class NaviRoute extends React.Component {
           <Switch>
             <Route exact path="/" component={HomePage} />
             <Route exact path="/register" component={RegisterPage} />
-            <Route path="/about" component={AboutPage} />
             <Route path="/contact" component={ContactPage} />
             <Route path="/dashboard" component={DashBoard} />
-            <Route path="/todo" component={TodoApp} />
             <Route path="/projects" component={Board} />
           </Switch>
         </div>

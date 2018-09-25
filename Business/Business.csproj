@@ -31,8 +31,6 @@
   <ItemGroup>
     <Compile Remove="Auth\ResourceAction.cs" />
     <Compile Remove="Services\SessionBS.cs" />
-    <Content Include="Models\SimpleNameVM.cs" />
-    <Content Include="Models\User.cs" />
     <Content Include="Entities\User.cs" />
     <Content Include="Exceptions\AppException.cs" />
     <Content Include="Models\DTO\SignInDTO.cs" />

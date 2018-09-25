@@ -22,7 +22,6 @@
     <Content Include="frontend\src\layouts\Dashboard\Users\UserFriends.jsx" />
     <Content Include="frontend\src\layouts\Dashboard\Users\UserMessage.jsx" />
     <Content Include="frontend\src\layouts\Dashboard\Users\UserProfie.jsx" />
-    <Content Include="frontend\src\layouts\Frontend\About\AboutPage.jsx" />
     <Content Include="frontend\src\layouts\Frontend\Contact\Contact.jsx" />
     <Content Include="frontend\src\layouts\Frontend\Home\Home.jsx" />
     <Content Include="frontend\src\layouts\Frontend\ToDoPage\ToDoPage.jsx" />
@@ -76,5 +75,14 @@
     <Content Include="frontend\src\components\RegisterComponent\registerUser.sql" />
     <Content Include="frontend\src\components\ui\TodoList.js" />
     <Content Include="frontend\src\components\ui\TodoItem.js" />
+    <Content Include="frontend\src\components\Calendar\NewEntry.jsx" />
+    <Content Include="frontend\src\components\Calendar\CalendarDay.jsx" />
+    <Content Include="frontend\src\components\Calendar\ThreeDay.jsx" />
+    <Content Include="frontend\src\components\Calendar\WeekCalendar.jsx" />
+    <Content Include="frontend\src\components\Calendar\MonthView.jsx" />
+    <Content Include="frontend\src\components\Calendar\YearView.jsx" />
+    <Content Include="frontend\src\components\Calendar\Calendar.jsx" />
+    <Content Include="frontend\src\layouts\Dashboard\Users\Calendar\CalendarPage.jsx" />
+    <Content Include="frontend\src\layouts\Dashboard\Users\Calendar\Calendar.css" />
   </ItemGroup>
 </Project>
