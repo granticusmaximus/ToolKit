@@ -1,6 +1,5 @@
 import React from "react";
-import { Button, Form, FormGroup, Label, Col, Input, Row } from "reactstrap";
-import DatePicker from "react-date-picker";
+import { Button, Form, FormGroup, Label, Col, Input } from "reactstrap";
 
 class NewEvent extends React.Component {
   state = {
@@ -13,33 +12,34 @@ class NewEvent extends React.Component {
       <div className="container">
         <div className="registerBox">
           <div className="header">New Event</div>
+          <hr />
           <Form>
-            <Row>
-              <center>
-                <FormGroup>
-                  <Label>Pick Date</Label>
-                  <Col sm={10}>
-                    <DatePicker
-                      onChange={this.onChange}
-                      value={this.state.date}
-                    />
-                  </Col>
-                </FormGroup>
-              </center>
-              <FormGroup row>
-                <Label for="eventTitle" sm={2}>
-                  Title of Event
-                </Label>
-                <Col sm={10}>
-                  <Input
-                    type="text"
-                    name="text"
-                    id="eventTitle"
-                    placeholder="Please enter title of event"
-                  />
-                </Col>
-              </FormGroup>
-            </Row>
+            <FormGroup row>
+              <Label for="eventDate" sm={2}>
+                Pick Date
+              </Label>
+              <Col sm={10}>
+                <Input
+                  type="date"
+                  name="date"
+                  id="eventTitle"
+                  placeholder="MM/DD/YYY"
+                />
+              </Col>
+            </FormGroup>
+            <FormGroup row>
+              <Label for="eventTitle" sm={2}>
+                Title of Event
+              </Label>
+              <Col sm={10}>
+                <Input
+                  type="text"
+                  name="text"
+                  id="eventTitle"
+                  placeholder="Please enter title of event"
+                />
+              </Col>
+            </FormGroup>
             <FormGroup row>
               <Label for="eventNotes" sm={2}>
                 Notes

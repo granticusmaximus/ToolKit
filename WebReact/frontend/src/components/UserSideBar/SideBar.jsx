@@ -40,11 +40,6 @@ const SideBar = () => (
               Calendar
             </Link>
           </li>
-          <li>
-            <Link to={"/calendar/new"} className="nav-link">
-              New Event
-            </Link>
-          </li>
         </ul>
       </div>
       <Switch>
