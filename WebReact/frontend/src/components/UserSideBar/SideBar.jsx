@@ -7,6 +7,7 @@ import Friends from "../../layouts/Dashboard/Users/UserFriends";
 import EditProfile from "../../layouts/Dashboard/Users/UserEditProfile";
 import { TodoApp } from "../../layouts/Frontend/ToDoPage/ToDoPage";
 import CalendarPage from "../../layouts/Dashboard/Users/Calendar/CalendarPage";
+import NewEvent from "../../layouts/Dashboard/Users/Calendar/NewEvent";
 
 const SideBar = () => (
   <Router>
@@ -39,6 +40,11 @@ const SideBar = () => (
               Calendar
             </Link>
           </li>
+          <li>
+            <Link to={"/calendar/new"} className="nav-link">
+              New Event
+            </Link>
+          </li>
         </ul>
       </div>
       <Switch>
@@ -48,6 +54,7 @@ const SideBar = () => (
         <Route exact path="/user/friends" component={Friends} />
         <Route exact path="/todo" component={TodoApp} />
         <Route exact path="/calendar" component={CalendarPage} />
+        <Route exact path="/calendar/new" component={NewEvent} />
       </Switch>
     </div>
   </Router>
