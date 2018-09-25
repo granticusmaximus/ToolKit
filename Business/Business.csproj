@@ -36,5 +36,7 @@
     <Compile Remove="Services\SessionBS.cs" />
     <Content Include="Exceptions\AppException.cs" />
     <Content Include="Models\DTO\SignInDTO.cs" />
+    <Content Include="Models\Calendar.cs" />
+    <Content Include="Services\UserService.cs" />
   </ItemGroup>
 </Project>
