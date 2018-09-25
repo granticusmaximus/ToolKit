@@ -86,5 +86,7 @@
     <Content Include="frontend\src\layouts\Dashboard\Users\Calendar\Calendar.css" />
     <Content Include="frontend\src\layouts\Dashboard\Users\Calendar\NewEvent.jsx" />
     <Content Include="frontend\src\components\hoc\wrapInputBox.js" />
+    <Content Include="frontend\src\layouts\Dashboard\Users\Messages\Archived.jsx" />
+    <Content Include="frontend\src\layouts\Dashboard\Users\Messages\NewMessages.jsx" />
   </ItemGroup>
 </Project>
