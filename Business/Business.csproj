@@ -9,8 +9,8 @@
     <Folder Include="Services\" />
     <Folder Include="Auth\" />
     <Folder Include="Models\DTO\" />
-    <Folder Include="Entities\" />
     <Folder Include="Exceptions\" />
+    <Folder Include="Interfaces\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
@@ -29,9 +29,11 @@
     <PackageReference Include="MSA.NetCore.ODBC" Version="1.0.3" />
   </ItemGroup>
   <ItemGroup>
+    <Content Remove="Entities\User.cs" />
+  </ItemGroup>
+  <ItemGroup>
     <Compile Remove="Auth\ResourceAction.cs" />
     <Compile Remove="Services\SessionBS.cs" />
-    <Content Include="Entities\User.cs" />
     <Content Include="Exceptions\AppException.cs" />
     <Content Include="Models\DTO\SignInDTO.cs" />
   </ItemGroup>

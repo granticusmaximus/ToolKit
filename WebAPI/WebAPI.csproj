@@ -25,7 +25,5 @@
     <Folder Include="App_Start\" />
     <Folder Include="Models\" />
     <Folder Include="Views\" />
-    <Content Include="Controllers\UserController.cs" />
-    <Content Include="Controllers\AccountController.cs" />
   </ItemGroup>
 </Project>

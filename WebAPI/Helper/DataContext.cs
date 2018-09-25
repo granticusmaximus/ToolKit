@@ -1,5 +1,5 @@
 ﻿using System;
-using Business.Entities;
+using Business.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace WebAPI.Helper
