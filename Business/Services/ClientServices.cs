@@ -14,7 +14,7 @@ namespace Business.Services
                 {
                     SqlConnection conn = new SqlConnection("Data source=localhost; Database=toolkitDB;User Id=postgres;Password=Wats#0529");
                     conn.Open();
-                    SqlCommand cmd = new SqlCommand("INSERT INTO clients ( fname, lname, phone, businessname, email, businessaddress, city, state, zip, isactive, created_on, updated_on) values ( @fname, @lname, @phone, @businessname, @email, @businessaddress, @city, @state, @zip, @isactive, @created_on, @updated_on) ;", conn);
+                    SqlCommand cmd = new SqlCommand("INSERT INTO clients values ( fname, lname, phone, businessname, email, businessaddress, city, state, zip, isactive, created_on, updated_on) ;", conn);
                     cmd.ExecuteNonQuery();
                     Console.WriteLine("Inserting Data Successfully");
                     conn.Close();
