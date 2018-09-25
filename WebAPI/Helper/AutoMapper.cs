@@ -1,6 +1,6 @@
 ﻿using System;
 using AutoMapper;
-using Business.Entities;
+using Business.Models;
 using Business.Models.DTO;
 
 namespace WebAPI.Helper
