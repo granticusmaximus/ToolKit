@@ -1,7 +1,8 @@
-﻿using Business.Models;
+﻿using System;
 using Microsoft.EntityFrameworkCore;
+using WebAPI.Models;
 
-namespace Business.DataAccess
+namespace WebAPI.DataAccess
 {
     public class DataContext : DbContext
     {

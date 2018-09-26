@@ -1,5 +1,5 @@
 ﻿using System;
-namespace Business.Models
+namespace WebAPI.Models
 {
     public class SimpleNameVM
     {

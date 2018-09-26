@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI", "WebAPI\WebAPI.csproj", "{B351B4F1-4715-45BA-9506-E40BF747FA6B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business", "Business\Business.csproj", "{B2A926E0-FAD1-4D8F-89ED-F33E9996E533}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebReact", "WebReact\WebReact.csproj", "{ED8E6C12-3D6E-4CC6-A398-06046C08359C}"
 EndProject
 Global
@@ -17,10 +15,6 @@ Global
 		{B351B4F1-4715-45BA-9506-E40BF747FA6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B351B4F1-4715-45BA-9506-E40BF747FA6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B351B4F1-4715-45BA-9506-E40BF747FA6B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B2A926E0-FAD1-4D8F-89ED-F33E9996E533}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B2A926E0-FAD1-4D8F-89ED-F33E9996E533}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B2A926E0-FAD1-4D8F-89ED-F33E9996E533}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B2A926E0-FAD1-4D8F-89ED-F33E9996E533}.Release|Any CPU.Build.0 = Release|Any CPU
 		{ED8E6C12-3D6E-4CC6-A398-06046C08359C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{ED8E6C12-3D6E-4CC6-A398-06046C08359C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ED8E6C12-3D6E-4CC6-A398-06046C08359C}.Release|Any CPU.ActiveCfg = Release|Any CPU

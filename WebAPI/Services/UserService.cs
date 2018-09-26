@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Business.DataAccess;
-using Business.Exceptions;
-using Business.Models;
+using WebAPI.DataAccess;
+using WebAPI.Exceptions;
+using WebAPI.Models;
 
 namespace WebAPI.Services
 {
@@ -62,7 +62,7 @@ namespace WebAPI.Services
                 throw new AppException("Password is required");
 
             if (_context.Users.Any(x => x.Username == user.Username))
-                throw new AppException("Username \"" + user.Username + "\" is already taken");
+                throw new AppException("Username " + user.Username + " is already taken");
 
             byte[] passwordHash, passwordSalt;
             CreatePasswordHash(password, out passwordHash, out passwordSalt);

@@ -1,5 +1,5 @@
 ﻿using System;
-namespace Business.Models.DTO
+namespace WebAPI.Models.DTO
 {
     public class UserDto
     {

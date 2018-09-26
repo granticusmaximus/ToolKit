@@ -1,11 +1,9 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Security.Claims;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Business.Models.DTO
+namespace WebAPI.Models.DTO
 {
     public class SignInDTO
     {

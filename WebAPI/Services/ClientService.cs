@@ -1,8 +1,7 @@
 ﻿using System;
-using System.Data;
 using System.Data.SqlClient;
 
-namespace Business.Services
+namespace WebAPI.Services
 {
     public class ClientServices
     {

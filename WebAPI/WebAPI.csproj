@@ -6,7 +6,7 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNet.Mvc" Version="5.2.6" />
-    <PackageReference Include="NLog" Version="4.5.9" />
+    <PackageReference Include="NLog" Version="4.5.10" />
     <PackageReference Include="EntityFramework" Version="6.2.0" />
     <PackageReference Include="log4net" Version="2.0.8" />
     <PackageReference Include="Microsoft.AspNet.WebApi" Version="5.2.6" />
@@ -14,11 +14,11 @@
     <PackageReference Include="Microsoft.AspNet.WebApi.Cors" Version="5.2.6" />
     <PackageReference Include="System.Net.Http" Version="4.3.3" />
     <PackageReference Include="AutoMapper" Version="7.0.1" />
-    <PackageReference Include="RestSharp" Version="106.3.1" />
+    <PackageReference Include="RestSharp" Version="106.4.2" />
     <PackageReference Include="ClosedXML" Version="0.93.1" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Business\Business.csproj" />
+    <PackageReference Include="AutoMapper" Version="7.0.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="5.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.1.4" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Helper\" />
@@ -26,5 +26,13 @@
     <Folder Include="Models\" />
     <Folder Include="Views\" />
     <Folder Include="Services\" />
+    <Folder Include="Auth\" />
+    <Folder Include="Exceptions\" />
+    <Folder Include="DataAccess\" />
+    <Folder Include="Models\DTO\" />
+    <Folder Include="Interfaces\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Models\UserModel.cs" />
   </ItemGroup>
 </Project>
