@@ -34,5 +34,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Models\UserModel.cs" />
+    <Content Include="Controllers\UsersController.cs" />
   </ItemGroup>
 </Project>
