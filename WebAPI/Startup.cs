@@ -18,6 +18,7 @@ using Microsoft.IdentityModel.Tokens;
 using WebAPI.Helper;
 using AutoMapper;
 using WebAPI.Services;
+using WebAPI.DataAccess;
 
 namespace WebAPI
 {
@@ -34,7 +35,7 @@ namespace WebAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddCors();
-            services.AddDbContext<DataContext>(x => x.UseInMemoryDatabase("TestDb"));
+            services.AddDbContext<ToolkitDbContext>(x => x.UseInMemoryDatabase("toolkitDB"));
             services.AddMvc();
             services.AddAutoMapper();
 

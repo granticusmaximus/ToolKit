@@ -31,6 +31,7 @@
     <PackageReference Include="Microsoft.AspNet.WebApi.Core" Version="5.2.6" />
     <PackageReference Include="Microsoft.AspNet.SignalR" Version="2.4.0-preview1-20180920-03" />
     <PackageReference Include="Npgsql" Version="4.0.3" />
+    <PackageReference Include="PagedList" Version="1.17.0" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Helper\" />
@@ -43,6 +44,8 @@
     <Folder Include="DataAccess\" />
     <Folder Include="Models\DTO\" />
     <Folder Include="Interfaces\" />
+    <Folder Include="Logging\" />
+    <Folder Include="ViewModels\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Models\UserModel.cs" />
