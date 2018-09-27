@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using WebAPI.DataAccess;
 using WebAPI.Exceptions;
-using WebAPI.Models;
+using User = WebAPI.DataAccess.User;
 
 namespace WebAPI.Services
 {
@@ -19,9 +19,9 @@ namespace WebAPI.Services
 
     public class UserService : IUserService
     {
-        private DataContext _context;
+        private ToolkitDbContext _context;
 
-        public UserService(DataContext context)
+        public UserService(ToolkitDbContext context)
         {
             _context = context;
         }

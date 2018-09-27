@@ -14,6 +14,7 @@ namespace WebAPI.DataAccess
         { }
 
         public DbSet<User> Users { get; set; }
+        public DbSet<Client> Clients { get; set; }
     }
 
     public class User
@@ -29,6 +30,22 @@ namespace WebAPI.DataAccess
         public byte[] PasswordSalt { get; set; }
 
         public List<User> Users { get; set; }
+    }
+
+    public class Client
+    {
+        public int ClientID { get; set; }
+        public string POCname { get; set; }
+        public string POCemail { get; set; }
+        public string POCphone { get; set; }
+        public string BusinessName { get; set; }
+        public string Address { get; set; }
+        public string City { get; set; }
+        public string State { get; set; }
+        public string Zip { get; set; }
+        public string Notes { get; set; }
+
+        public List<Client> Clients { get; set; }
     }
 
     class ConnectToDb
@@ -58,7 +75,7 @@ namespace WebAPI.DataAccess
             using (NpgsqlConnection conn = new NpgsqlConnection(connectionStr))
             {
                 using (NpgsqlCommand command = new NpgsqlCommand
-                    ($"SELECT DATNAME FROM pg_catalog.pg_database WHERE DATNAME = '{dbname}'", conn))
+                    ($"SELECT DATNAME FROM pg_catalog.pg_toolkitDB WHERE DATNAME = '{dbname}'", conn))
                 {
                     try
                     {
