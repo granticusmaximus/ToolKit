@@ -1,4 +1,4 @@
-export interface UserModelState {
+export interface InvoiceModelState {
     iid: number;
     clientID: number;
     amountDue: string;
@@ -8,7 +8,7 @@ export interface UserModelState {
     updatedat?: any;
   }
   
-  export interface UserModelStateVM {
+  export interface InvoiceModelStateVM {
     iid: number;
     clientID: number;
     amountDue: string;
@@ -18,7 +18,7 @@ export interface UserModelState {
     updatedat?: any;
   }
   
-  export const UserModelStateVMInitial: UserModelStateVM = {
+  export const InvoiceModelStateVMInitial: InvoiceModelStateVM = {
     iid: 0,
     clientID: 0,
     amountDue: "",

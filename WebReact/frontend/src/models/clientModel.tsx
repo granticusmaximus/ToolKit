@@ -9,7 +9,7 @@ export interface UserModelState {
     city: string;
     state: string;
     zip: number;
-    createdat?: any;
+    created_on?: any;
     updatedat?: any;
   }
   
@@ -24,7 +24,7 @@ export interface UserModelState {
     city: string;
     state: string;
     zip: number;
-    createdat?: any;
+    created_on?: any;
     updatedat?: any;
   }
   
