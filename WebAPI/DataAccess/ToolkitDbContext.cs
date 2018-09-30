@@ -1,5 +1,9 @@
 using Microsoft.EntityFrameworkCore;
 using System;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using Npgsql;
@@ -9,12 +13,24 @@ namespace WebAPI.DataAccess
 {
     public class ToolkitDbContext : DbContext
     {
-        public ToolkitDbContext(DbContextOptions<ToolkitDbContext> options)
-            : base(options)
-        { }
+        public ToolkitDbContext() : base("ToolkitDbContext") // put connection string name here
+        {
+            // WHy are we setting these to false
+            this.Configuration.LazyLoadingEnabled = false;
+            this.Configuration.ProxyCreationEnabled = false;
+
+#if DEBUG
+            this.Database.Log = s => System.Diagnostics.Debug.WriteLine(s);
+#endif
+        }
 
         public DbSet<User> Users { get; set; }
         public DbSet<Client> Clients { get; set; }
+    }
+
+    protected override void OnModelCreating(DbModelBuilder modelBuilder)
+    {
+        modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
     }
 
     public class User
