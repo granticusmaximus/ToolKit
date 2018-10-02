@@ -43,7 +43,6 @@
     <Folder Include="Exceptions\" />
     <Folder Include="DataAccess\" />
     <Folder Include="Models\DTO\" />
-    <Folder Include="Interfaces\" />
     <Folder Include="Logging\" />
     <Folder Include="ViewModels\" />
     <Folder Include="DataAccess\ClientDB\" />

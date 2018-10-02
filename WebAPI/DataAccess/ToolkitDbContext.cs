@@ -37,6 +37,7 @@ namespace WebAPI.DataAccess
 
         public DbSet<User> Users { get; set; }
         public DbSet<Client> Clients { get; set; }
+        public DbSet<Calendar> Calendars { get; set; }
     }
 
     public class User
@@ -68,6 +69,16 @@ namespace WebAPI.DataAccess
         public string Notes { get; set; }
 
         public List<Client> Clients { get; set; }
+    }
+
+    public class Calendar
+    {
+        public int CalendarID { get; set; }
+        public string CalendarTitle { get; set; }
+        public DateTime Date { get; set; }
+        public string CalendarNotes { get; set; }
+
+        public List<Calendar> Calendars { get; set; }
     }
 
     class InsertClientData
