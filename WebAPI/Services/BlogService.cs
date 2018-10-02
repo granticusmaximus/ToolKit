@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using WebAPI.DataAccess;
 using WebAPI.Exceptions;
 
@@ -33,6 +34,11 @@ namespace WebAPI.Services
         public IEnumerable<Post> GetAllPosts()
         {
             return _context.Posts;
+        }
+
+        public IEnumerable<Blog> GetAllBlogs()
+        {
+            return _context.Blogs;
         }
 
         public Post GetPostById(Post PostId)
@@ -130,13 +136,6 @@ namespace WebAPI.Services
 
             if (blog == null)
                 throw new AppException("Post not found");
-
-            if (blogParam.BlogId != blog.BlogId)
-            {
-                // username has changed so check if the new username is already taken
-                if (_context.Blogs.Any(x => x.BlogID == blogParam.BlogId))
-                    throw new AppException("Blog Id " + blogParam.BlogId + " is already in use");
-            }
 
             if (blogParam.BlogName != blog.BlogName)
             {

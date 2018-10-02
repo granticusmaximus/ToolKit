@@ -47,7 +47,6 @@
     <Folder Include="Logging\" />
     <Folder Include="ViewModels\" />
     <Folder Include="DataAccess\ClientDB\" />
-    <Folder Include="DataAccess\StoredProcedures\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Models\UserModel.cs" />
