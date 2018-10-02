@@ -41,7 +41,7 @@ namespace WebAPI.Services
         }
 
         #region Post Specific Functions
-        public Post Create(Post post)
+        public Post CreatePost(Post post)
         {
             // validation
             if (_context.Posts.Any(x => x.Title == post.Title))
@@ -57,7 +57,7 @@ namespace WebAPI.Services
             return post;
         }
 
-        public void Update(Post postParam)
+        public void UpdatePost(Post postParam)
         {
             var post = _context.Posts.Find(postParam.PostId);
 
@@ -88,6 +88,79 @@ namespace WebAPI.Services
             _context.Posts.Update(post);
             _context.SaveChanges();
 
+        }
+
+        public void DeletePost(Post PostId)
+        {
+            var post = _context.Posts.Find(PostId);
+            if (post != null)
+            {
+                _context.Posts.Remove(post);
+                _context.SaveChanges();
+            }
+        }
+        #endregion
+
+        #region Blog Specific Functions
+        public Blog GetBlogById(Blog BlogId)
+        {
+            return _context.Blogs.Find(BlogId);
+        }
+
+
+        public Blog CreateBlog(Blog blog)
+        {
+            // validation
+            if (_context.Blogs.Any(x => x.BlogName == blog.BlogName))
+                throw new AppException("Blog Name " + blog.BlogName + " is already in use");
+
+            // validation
+            if (_context.Blogs.Any(x => x.BlogId == blog.BlogId))
+                throw new AppException("Blog ID " + blog.BlogId + " is already in use");
+
+            _context.Blogs.Add(blog);
+            _context.SaveChanges();
+
+            return blog;
+        }
+
+        public void UpdateBlog(Blog blogParam)
+        {
+            var blog = _context.Blogs.Find(blogParam.BlogId);
+
+            if (blog == null)
+                throw new AppException("Post not found");
+
+            if (blogParam.BlogId != blog.BlogId)
+            {
+                // username has changed so check if the new username is already taken
+                if (_context.Blogs.Any(x => x.BlogID == blogParam.BlogId))
+                    throw new AppException("Blog Id " + blogParam.BlogId + " is already in use");
+            }
+
+            if (blogParam.BlogName != blog.BlogName)
+            {
+                // username has changed so check if the new username is already taken
+                if (_context.Blogs.Any(x => x.BlogName == blogParam.BlogName))
+                    throw new AppException("Blog Name " + blogParam.BlogName + " is already in use");
+            }
+
+            // update client properties
+            blog.BlogId = blogParam.BlogId;;
+
+            _context.Blogs.Update(blog);
+            _context.SaveChanges();
+
+        }
+
+        public void DeleteBlog(Blog BlogId)
+        {
+            var blog = _context.Blogs.Find(BlogId);
+            if (blog != null)
+            {
+                _context.Blogs.Remove(blog);
+                _context.SaveChanges();
+            }
         }
         #endregion
     }
