@@ -54,6 +54,6 @@
     <Content Include="Helper\AutoMapper.cs" />
     <Content Include="Helper\DataContext.cs" />
     <Content Include="DataAccess\ToolkitDbContext.cs" />
-    <Compile Remove="Services\ClientService.cs" />
+    <Compile Remove="Controllers\CourseController.cs" />
   </ItemGroup>
 </Project>

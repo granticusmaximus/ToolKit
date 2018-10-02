@@ -6,31 +6,37 @@ using System.Threading.Tasks;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using Npgsql;
 
 
 namespace WebAPI.DataAccess
 {
     public class ToolkitDbContext : DbContext
     {
-        public ToolkitDbContext() : base("ToolkitDbContext") // put connection string name here
+        static void Connect(string[] args)
         {
-            // WHy are we setting these to false
-            this.Configuration.LazyLoadingEnabled = false;
-            this.Configuration.ProxyCreationEnabled = false;
+            try
+            {
+                SqlConnection conn = new SqlConnection("Data source=localhost; Database=toolkitDB;User Id=postgres;Password=Wats#0529");
+                conn.Open();
+                Console.WriteLine("Connected to Database Successfully");
+                conn.Close();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Exception occurred while connecting to:" + e.Message + "\t" + e.GetType());
+            }
+            Console.ReadKey();
 
-#if DEBUG
-            this.Database.Log = s => System.Diagnostics.Debug.WriteLine(s);
-#endif
+        }
+
+        public ToolkitDbContext(DbContextOptions<ToolkitDbContext> options) : base(options)
+        {
+
+
         }
 
         public DbSet<User> Users { get; set; }
         public DbSet<Client> Clients { get; set; }
-    }
-
-    protected override void OnModelCreating(DbModelBuilder modelBuilder)
-    {
-        modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
     }
 
     public class User
@@ -63,52 +69,6 @@ namespace WebAPI.DataAccess
 
         public List<Client> Clients { get; set; }
     }
-
-    class ConnectToDb
-    {
-        static void Connect(string[] args)
-        {
-            try
-            {
-                SqlConnection conn = new SqlConnection("Data source=localhost; Database=toolkitDB;User Id=postgres;Password=Wats#0529");
-                conn.Open();
-                Console.WriteLine("Connected to Database Successfully");
-                conn.Close();
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Exception occurred while connecting to:" + e.Message + "\t" + e.GetType());
-            }
-            Console.ReadKey();
-
-        }
-    }
-
-    class CheckDb
-    {
-        public bool CheckifDbExist(string connectionStr, string dbname)
-        {
-            using (NpgsqlConnection conn = new NpgsqlConnection(connectionStr))
-            {
-                using (NpgsqlCommand command = new NpgsqlCommand
-                    ($"SELECT DATNAME FROM pg_catalog.pg_toolkitDB WHERE DATNAME = '{dbname}'", conn))
-                {
-                    try
-                    {
-                        conn.Open();
-                        var i = command.ExecuteScalar();
-                        conn.Close();
-                        if (i.ToString().Equals(dbname)) //always 'true' (if it exists) or 'null' (if it doesn't)
-                            return true;
-                        else return false;
-                    }
-                    catch (Exception e) { return false; }
-                }
-            }
-        }
-    }
-
-
 
     class InsertClientData
     {
