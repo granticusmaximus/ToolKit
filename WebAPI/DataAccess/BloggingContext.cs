@@ -88,5 +88,6 @@ namespace WebAPI.DataAccess
 
         public int BlogId { get; set; }
         public Blog Blog { get; set; }
+        public List<Blog> Blogs { get; set; }
     }
 }
