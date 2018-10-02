@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-
+using WebAPI.Models;
 
 namespace WebAPI.DataAccess
 {
@@ -38,6 +38,7 @@ namespace WebAPI.DataAccess
         public DbSet<User> Users { get; set; }
         public DbSet<Client> Clients { get; set; }
         public DbSet<Calendar> Calendars { get; set; }
+        public DbSet<Invoice> Invoices { get; set; }
     }
 
     public class User

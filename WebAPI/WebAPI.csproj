@@ -55,5 +55,6 @@
     <Content Include="Helper\DataContext.cs" />
     <Content Include="DataAccess\ToolkitDbContext.cs" />
     <Compile Remove="Controllers\CourseController.cs" />
+    <Compile Remove="Models\Invoices.cs" />
   </ItemGroup>
 </Project>
