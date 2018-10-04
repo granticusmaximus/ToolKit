@@ -53,7 +53,6 @@
     <Content Include="Models\Calendar.cs" />
     <Content Include="Helper\AutoMapper.cs" />
     <Content Include="Helper\DataContext.cs" />
-    <Content Include="DataAccess\ToolkitDbContext.cs" />
     <Compile Remove="Controllers\CourseController.cs" />
     <Compile Remove="Models\Invoices.cs" />
   </ItemGroup>
