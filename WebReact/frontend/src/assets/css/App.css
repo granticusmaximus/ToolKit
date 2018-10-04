@@ -172,6 +172,7 @@ footer .buttons {
   .navBar {
     width: 100%;
     height: 60px;
+    color: white;
     background: #6da6db;
     background: -moz-linear-gradient(top, #6da6db 0%, #153f6b 100%);
     background: -webkit-gradient(
@@ -186,6 +187,30 @@ footer .buttons {
     background: linear-gradient(to bottom, #6da6db 0%, #153f6b 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6da6db', endColorstr='#153f6b', GradientType=0 );
   }
+
+.navBar a {
+  color: white;
+}
+
+.navBar a:hover {
+  color: rgb(202, 130, 130);
+}
+
+.navBar li {
+  color: white;
+}
+
+.navBar li:hover {
+  color: rgb(202, 130, 130);
+}
+
+.navBar Link {
+  color: white;
+}
+
+.navBar Link:hover {
+  color: rgb(202, 130, 130);
+}
   
   .user {
     display: inline-block;
@@ -461,13 +486,13 @@ footer .buttons {
   }
   
   a {
-    color: #9c27b0;
+    color: white;
     text-decoration: none;
   }
   
   a:hover,
   a:focus {
-    color: #89229b;
+    color: #d0a5d8;
     text-decoration: none;
   }
   
