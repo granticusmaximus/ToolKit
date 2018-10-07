@@ -1,8 +1,8 @@
 export interface UserModelState {
     uid: number;
     username: string;
-    fname: string;
-    lname: string;
+    firstName: string;
+    lastName: string;
     email: string;
     isActive: boolean;
     isAdmin: boolean;
@@ -13,8 +13,8 @@ export interface UserModelState {
   export interface UserModelStateVM {
     uid: number;
     username: string;
-    fname: string;
-    lname: string;
+    firstName: string;
+    lastName: string;
     email: string;
     isActive: boolean;
     isAdmin: boolean;
@@ -25,8 +25,8 @@ export interface UserModelState {
   export const UserModelStateVMInitial: UserModelStateVM = {
     uid: 0,
     username: "",
-    fname: "",
-    lname: "",
+    firstName: "",
+    lastName: "",
     email: "",
     isActive: true,
     isAdmin: false,

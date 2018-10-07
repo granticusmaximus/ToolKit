@@ -1,79 +1,87 @@
 import React from "react";
 import { Col, Button, Form, FormGroup, Label, Input } from "reactstrap";
+import { connect } from 'react-redux';
 
-export default class RegisterComponent extends React.Component {
+class RegisterComponent extends React.Component {
+  handleEdit = (e) => {
+    e.preventDefault();
+    const username = this.getUsername.value;
+    const firstName = this.getFirstName.value;
+    const lastName = this.getLastName.value;
+    const email = this.getEmail.value;
+    const password = this.getPassword.value;
+    const data = {
+      username,
+      firstName,
+      lastName,
+      email,
+      password
+    }
+    this.props.dispatch({
+      type: 'ADD_USER',
+      data
+    })
+    this.getUsername.value = '';
+    this.getFirstName.value = '';
+    this.getLastName.value = '';
+    this.getEmail.value = '';
+    this.getPassword.value = '';
+  }
   render() {
     return (
       <div className="container">
         <div className="registerBox">
           <div className="header">Register Form:</div>
-          <hr />
-          <Form>
-            <FormGroup row>
-              <Label for="exampleEmail" sm={2}>
+          <Form className="form" onSubmit={this.handleSubmit} >
+            <hr />
+            <FormGroup check row>
+              <Label for="registerEmail" sm={2}>
                 Email
-              </Label>
-              <Col sm={10}>
-                <Input
-                  type="email"
-                  name="email"
-                  id="exampleEmail"
-                  placeholder="Please enter an email"
-                />
-              </Col>
-            </FormGroup>
-            <FormGroup row>
-              <Label for="mainPassword" sm={2}>
-                Set Password
-              </Label>
-              <Col sm={10}>
-                <Input
-                  type="password"
-                  name="password"
-                  id="mainPassword"
-                  placeholder="Enter a Password"
-                />
-              </Col>
-            </FormGroup>
-            <FormGroup row>
-              <Label for="confirmPassword" sm={2}>
-                Confirm Password
-              </Label>
-              <Col sm={10}>
-                <Input
-                  type="password"
-                  name="password"
-                  id="confirmPassword"
-                  placeholder="Confirm your Password"
-                />
-              </Col>
-            </FormGroup>
-            <FormGroup row>
-              <Label for="exampleFile" sm={2}>
-                Profile picture
-              </Label>
-              <Col sm={10}>
-                <Input type="file" name="file" id="exampleFile" />
-              </Col>
-            </FormGroup>
-            <FormGroup row>
-              <Col sm={{ size: 10 }}>
-                <FormGroup check>
-                  <Label check>
-                    <Input type="checkbox" id="checkbox2" /> I agree to the
-                    terms and services
-                  </Label>
-                </FormGroup>
-              </Col>
+            </Label>
+              <Input required type="text" ref={(input) => this.getEmail = input}
+                placeholder="Enter Your Email" /><br /><br />
             </FormGroup>
             <FormGroup check row>
-              <Col sm={{ size: 10 }}>
-                <Button color="success">Register Account</Button>
-              </Col>
+              <Label for="registerFirstName" sm={2}>
+                First Name
+            </Label>
+              <Input required type="text" ref={(input) => this.getFirstName = input}
+                placeholder="Enter First Name" /><br /><br />
             </FormGroup>
+            <FormGroup check row>
+              <Label for="registerLastName" sm={2}>
+                Last Name
+            </Label>
+              <Input required type="text" ref={(input) => this.getLastName = input}
+                placeholder="Enter Last Name" /><br /><br />
+            </FormGroup>
+            <FormGroup check row>
+              <Label for="registerPassword" sm={2}>
+                Password
+            </Label>
+              <Input required type="text" ref={(input) => this.getPassword = input}
+                placeholder="Enter Password" /><br /><br />
+            </FormGroup>
+            <FormGroup check row>
+              <Label for="registerPassword" sm={2}>
+                Confirm Password
+            </Label>
+              <Input required type="text" ref={(input) => this.getPassword = input}
+                placeholder="Confirm Password" /><br /><br />
+            </FormGroup>
+            <center>
+              <FormGroup check row>
+                <Col sm={{ size: 10 }}>
+                  <Button color="success">Register Account</Button>
+                </Col>
+              </FormGroup>
+            </center>
           </Form>
+
+
         </div>
       </div>
     );
   }
 }
+export default connect()(RegisterComponent);

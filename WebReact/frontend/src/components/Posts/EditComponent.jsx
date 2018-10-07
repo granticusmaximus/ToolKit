@@ -11,7 +11,9 @@ class EditComponent extends Component {
         const newMessage = this.getMessage.value;
         const data = {
             newTitle,
-            newMessage
+            newMessage,
+            newPersonAssigned,
+            newDueDate
         }
         this.props.dispatch({ type: 'UPDATE', id: this.props.post.id, data: data })
     }
