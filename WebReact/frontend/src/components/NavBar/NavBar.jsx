@@ -14,6 +14,7 @@ import Board from "../../layouts/Projects/Board";
 import RegisterPage from "../../layouts/Frontend/Register/RegisterPage";
 import PostPage from "../../layouts/Dashboard/Users/Posts/PostPage";
 import "../../assets/css/App.css";
+import LoginPage from "../../layouts/Frontend/Login/LoginPage";
 
 export default class NaviRoute extends React.Component {
   constructor(props) {
@@ -59,6 +60,13 @@ export default class NaviRoute extends React.Component {
                   Account Info
                 </DropdownToggle>
                 <DropdownMenu right>
+                  <DropdownItem>
+                    <li>
+                      <Link to={"/login"} className="nav-link">
+                        Login
+                      </Link>
+                    </li>
+                  </DropdownItem>
                   <DropdownItem>
                     <li>
                       <Link to={"/register"} className="nav-link">
@@ -112,6 +120,7 @@ export default class NaviRoute extends React.Component {
             <Route path="/dashboard" component={DashBoard} />
             <Route path="/projects" component={Board} />
             <Route path="/postproject" component={PostPage} />
+            <Route path="/login" component={LoginPage} />
           </Switch>
         </div>
       </Router>
