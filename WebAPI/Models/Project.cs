@@ -8,6 +8,7 @@ namespace WebAPI.Models
     {
         [Key]
         public int PID { get; set; }
+        public string ProjectTitle { get; set; }
         public int ClientID { get; set; }
         public int EmpID { get; set; }
         public string EmpFname { get; set; }
