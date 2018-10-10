@@ -9,6 +9,7 @@ namespace WebAPI.Models
         [Key]
         public int IID { get; set; }
         public int ClientID { get; set; }
+        public string Invoice_Too { get; set; }
         public DateTime DueDate { get; set; }
         public DateTime Created_at { get; set; }
         public DateTime Updated_at { get; set; }
