@@ -33,4 +33,3 @@ export interface UserModelState {
     created_on: "",
     last_login: ""
   };
-  

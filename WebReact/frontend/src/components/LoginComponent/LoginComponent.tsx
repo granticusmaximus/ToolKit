@@ -1,6 +1,15 @@
 import React from "react";
 import { Col, Button, Form, FormGroup, Label, Input } from "reactstrap";
 import { connect } from 'react-redux';
+import { UserModelStateVMInitial } from '../../models/userModel';
+
+export const LoginState = {
+  userState: UserModelStateVMInitial,
+}
+
+export const LoginStateInitial: LoginState = {
+  userState: UserModelStateVMInitial,
+};
 
 class LoginComponent extends React.Component {
   handleEdit = (e) => {

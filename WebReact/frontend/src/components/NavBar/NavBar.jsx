@@ -14,7 +14,7 @@ import Board from "../../layouts/Projects/Board";
 import RegisterPage from "../../layouts/Frontend/Register/RegisterPage";
 import PostPage from "../../layouts/Dashboard/Users/Posts/PostPage";
 import "../../assets/css/App.css";
-import LoginPage from "../../layouts/Frontend/Login/LoginPage";
+import LoginPage from "../../layouts/Frontend/Login/LoginPage.tsx";
 
 export default class NaviRoute extends React.Component {
   constructor(props) {

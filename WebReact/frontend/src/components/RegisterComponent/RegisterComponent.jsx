@@ -1,6 +1,19 @@
 import React from "react";
 import { Col, Button, Form, FormGroup, Label, Input } from "reactstrap";
 import { connect } from 'react-redux';
+import { UserModelState, UserModelStateVMInitial } from "../../../models/userModel";
+
+export const RegisterState = {
+  userState: UserModelState
+}
+
+export const RegisterStateInitial = (RegisterState) = {
+  userState: UserModelStateVMInitial
+};
+
+export const RegisterPayload = {
+  user: UserModelState
+}
 
 class RegisterComponent extends React.Component {
   handleEdit = (e) => {
